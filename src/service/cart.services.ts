@@ -72,4 +72,8 @@ export class CartService {
         const cart = await this.cartModel.findOne({ userId });
         return cart?.items || [];
     }
+
+    async deleteCartItem(userId: string, productId: string): Promise<void> {
+        await this.cartModel.findOneAndUpdate({ userId }, { $pull: { items: { productId } } }, { new: true });
+    }
 }

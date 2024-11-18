@@ -9,7 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node ./index.ts",
-    "dev": "nodemon ./index.ts"
+    "dev": "nodefn ./index.ts",
+    "build": "tsc",
+    "prod": "node dist/index.js"
   },
   "author": "Ashutosh Dubey",
   "license": "ISC",
@@ -22,6 +24,7 @@
     "express": "^4.21.0",
     "helmet": "^8.0.0",
     "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
     "mongodb": "^6.9.0",
     "mongoose": "^8.7.0",
     "multer": "^1.4.5-lts.1",

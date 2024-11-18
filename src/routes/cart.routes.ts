@@ -14,8 +14,8 @@ router.get('/', authenticate, async (req: Request, res: Response) => {
     await cartController.getCart(req, res);
 });
 
-router.delete('/remove-from-cart/:productId', authenticate, async (req: Request, res: Response) => {
-    await cartController.removeFromCart(req, res);
+router.delete('/:productId', authenticate, async (req: Request, res: Response) => {
+    await cartController.deleteCartItem(req, res);
 });
 
 router.delete('/clear-cart', authenticate, async (req: Request, res: Response) => {
